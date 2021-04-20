@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Bug</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="update-bug.component.css">
+</head>
+<body>
+
+
+	<h1>Update Bug</h1>
+	<form id="updateBug">
+		<div class="row">
+			<div class="col-5">
+				<label class="lab" for="bid">Bug ID</label>
+			</div>
+			<div class="col-6">
+				<input type="text" required id="bugId" name="bug_id"
+					placeholder="Enter bug ID..">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<label>Project ID:</label>
+			</div>
+			<div class="col-6">
+				<input id="pid" type="text">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<label class="lab" for="bname">Bug Name</label>
+			</div>
+			<div class="col-6">
+				<input type="text" id="bugName" name="bug_name"
+					placeholder="Enter bug name..">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<label for="bugStatus">Enter Bug status :</label>
+			</div>
+			<div class="col-6">
+				<select id="Status">
+					<option value="NEW">NEW</option>
+						<option value="ASSIGNED">ASSIGNED</option>
+						<option value="OPEN">OPEN</option>
+						<option value="CLOSED">CLOSED</option>
+						<option value="VERIFIED">VERIFIED</option>
+						<option value="DEFERRED">DEFERRED</option>
+						<option value="NOT_A_BUG">NOT_A_BUG</option>
+						<option value="REOPEN">REOPEN</option>
+						<option value="RETEST">RETEST</option>
+						<option value="REJECTED">REJECTED</option>
+						<option value="PENDING_RETEST">PENDING_RETEST</option>
+						<option value="DUPLICATE">DUPLICATE</option>
+						<option value="DEFECT">DEFECT</option>
+						<option value="WORK_IN_PROGRESS">WORK_IN_PROGRESS</option>
+						<option value="ISSUE">ISSUE</option>
+						<option value="FIXED">FIXED</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<label for="priority">Priority : </label>
+			</div>
+			<div class="col-6">
+				<select id="Priority">
+					<option value="HIGH">HIGH</option>
+					<option value="MEDIUM">MEDIUM</option>
+					<option value="LOW">LOW</option>
+				</select>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<label>Submitted On:</label>
+			</div>
+			<div class="col-6">
+				<input type="date" id="date1">
+			</div>
+		</div>
+
+
+	</form>
+
+	<div class="col-6">
+		<input type="submit" (click)="updateBug()" value="Submit">
+	</div>
+
+</body>
+</html>

@@ -15,15 +15,28 @@ bugArray: any;
 getABug(name:string){
   const observable = this.bugService.getABug(name);
   observable.subscribe(response => {
-    console.log(response);
+
     this.bugArray = response;
-   });
+    if(this.bugArray[0]==null){
+     return alert("No Bug Found")
+    }
+    else
+    return alert("Bug found!")
+
+
+
+  });
 }
 getStatus(status:STATUS){
   const observable = this.bugService.getStatus(status);
   observable.subscribe(response => {
     console.log(response);
     this.bugArray = response;
+    if(this.bugArray[0]==null){
+      return alert("No Bug Found")
+     }
+     else
+     return alert("Bug found!")
    });
 }
   ngOnInit(): void {

@@ -19,12 +19,18 @@
         <form id="createBug">
             <div class="form-row">
                 <div class="form-group col-md-6">
+
                     <label for="BugName">Name</label>
-                    <input [(ngModel)]='bug.name' name='input1' type="text" class="form-control" id="bugName">
-                </div>
+
+                    <span class="after">*</span>
+                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{10-bug.description.length}}  Characters left</span>
+                    <input [(ngModel)]='bug.name' name='input1' type="text" class="form-control" id="bugName" maxlength="10">
+
+                  </div>
                 <div class="form-group col-md-6">
                     <label for="bugStatuses">Status</label>
-                    <select [(ngModel)]='bug.status' name='input2' id="Status" class="form-control">
+                    <span class="after">*</span>
+                    <select [(ngModel)]='bug.status' name='input2' id="Status" class="form-control" >
                       <option selected>Choose...</option>
                       <option value="NEW">NEW</option>
 						          <option value="ASSIGNED">ASSIGNED</option>
@@ -48,6 +54,7 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="bugPriority">Priority</label>
+                    <span class="after">*</span>
                     <select [(ngModel)]='bug.priority' name="input3" id="status" class="form-control">
                       <option value="HIGH">HIGH</option>
                       <option value="MEDIUM">MEDIUM</option>
@@ -91,18 +98,24 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="pro">ProjectID</label>
-                    <input [(ngModel)]='bug.projectId' name='input9' type="text" class="form-control" id="project">
-                </div>
+                    <span class="after">*</span>
+                    <input [(ngModel)]='bug.projectId' name='input9' type="text" class="required" id="project">
+
+                  </div>
             </div>
             <div class="form-group">
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea [(ngModel)]='bug.description' name='input10' class="form-control" id="desc" rows="3"></textarea>
+                    <span style="font-size: small">{{100-bug.description.length}}  Characters left</span>
+                    <textarea [(ngModel)]='bug.description' name='input10' class="form-control" id="desc" rows="3" maxlength="100"></textarea>
+
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlTextarea2">Synopsis</label>
-                    <textarea [(ngModel)]='bug.synopsis' name='input11' class="form-control" id="syn" rows="3"></textarea>
-                </div>
+                    <span style="font-size: small">{{100-bug.description.length}}  Characters left</span>
+                    <textarea [(ngModel)]='bug.synopsis' name='input11' class="form-control" id="syn" rows="3" maxlength="100"></textarea>
+
+                  </div>
             </div>
 
         </form>
