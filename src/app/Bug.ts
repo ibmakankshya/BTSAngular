@@ -4,6 +4,7 @@ import { STATUS } from "./STATUS";
 import { TYPE } from "./TYPE";
 
 export class Bug{
+  id:string ='';
   name:string="Bug";
   status:STATUS=STATUS.NEW;
   priority:PRIORITY=PRIORITY.LOW;

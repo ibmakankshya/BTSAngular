@@ -12,11 +12,12 @@
 <body>
   <h3>Search Bug</h3>
   <div class='jumbotron'>
+    <div class="form-group col-md-2">
+      <label for="BugName">SEARCH BUG HERE :</label>
+    </div>
     <form>
       <div class="form-row">
-        <div class="form-group col-md-2">
-          <label for="BugName">SEARCH BUG HERE</label>
-        </div>
+
         <div class="form-group col-md-3">
           <select [(ngModel)]='bug.status' name='input2' id="Status" >
             <option selected>Choose...</option>
@@ -57,7 +58,7 @@
       <th>priority</th>
       <th>severity</th>
       <th>type</th>
-      <th>submittedOn</th>
+      <th>submittedOn </th>
       <th>eta</th>
       <th>module</th>
       <th>projectId</th>
@@ -71,8 +72,8 @@
           <td>{{bug.priority}}</td>
           <td>{{bug.severity}}</td>
           <td>{{bug.type}}</td>
-          <td>{{bug.submittedOn}}</td>
-          <td>{{bug.eta}}</td>
+          <td>{{bug.submittedOn | date: 'd/M/yy'}}</td>
+          <td>{{bug.eta | date: 'd/M/yy'}}</td>
           <td>{{bug.module}}</td>
           <td>{{bug.projectId}}</td>
           <td>{{bug.description}}</td>

@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="form.component.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Document</title>
+
+    <title>Create Bug</title>
 </head>
 
 <body id="bod">
@@ -23,8 +22,8 @@
                     <label for="BugName">Name</label>
 
                     <span class="after">*</span>
-                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{10-bug.description.length}}  Characters left</span>
-                    <input [(ngModel)]='bug.name' name='input1' type="text" class="form-control" id="bugName" maxlength="10">
+                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{30-bug.name.length}}  Characters left</span>
+                    <input [(ngModel)]='bug.name' name='input1' type="text" class="form-control" id="bugName" maxlength="30">
 
                   </div>
                 <div class="form-group col-md-6">
@@ -84,7 +83,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="date">Submitted On</label>
-                    <input [(ngModel)]='bug.submittedOn' name='input6' type="date" class="form-control" id="date1">
+                    <input [(ngModel)]="bug.submittedOn" name='input6' type="date" class="form-control" id="date1">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="date">Estimated Time</label>
@@ -96,31 +95,35 @@
                     <label for="mod">Module</label>
                     <input [(ngModel)]='bug.module' name='input8' type="text" class="form-control" id="module">
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="pro">ProjectID</label>
-                    <span class="after">*</span>
-                    <input [(ngModel)]='bug.projectId' name='input9' type="text" class="required" id="project">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+
+                      <label for="ProjectId">Project ID</label>
+
+                      <span class="after">*</span>
+
+                      <input [(ngModel)]='bug.projectId' name='input9' type="text" class="form-control" id="bugProjectid" >
 
                   </div>
-            </div>
+
+                    </div>
             <div class="form-group">
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlTextarea1">Description</label>
-                    <span style="font-size: small">{{100-bug.description.length}}  Characters left</span>
-                    <textarea [(ngModel)]='bug.description' name='input10' class="form-control" id="desc" rows="3" maxlength="100"></textarea>
+                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{100-bug.description.length}}  Characters left</span>
+                    <textarea [(ngModel)]='bug.description' name='input10' class="form-control" id="description" rows="3" maxlength="100"></textarea>
 
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlTextarea2">Synopsis</label>
-                    <span style="font-size: small">{{100-bug.description.length}}  Characters left</span>
-                    <textarea [(ngModel)]='bug.synopsis' name='input11' class="form-control" id="syn" rows="3" maxlength="100"></textarea>
+                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{100-bug.synopsis.length}}  Characters left</span>
+                    <textarea [(ngModel)]='bug.synopsis' name='input11' class="form-control" id="synopsis" rows="3" maxlength="100"></textarea>
 
                   </div>
             </div>
-
+            </div>
         </form>
         <button (click)='saveBug()' class="btn btn-primary" type="submit">Submit</button>
     </div>
 </body>
-
 </html>
