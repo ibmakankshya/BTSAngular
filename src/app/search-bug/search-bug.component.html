@@ -58,12 +58,13 @@
       <th>priority</th>
       <th>severity</th>
       <th>type</th>
-      <th>submittedOn </th>
+
       <th>eta</th>
       <th>module</th>
       <th>projectId</th>
       <th>description</th>
       <th>synopsis</th>
+      <th>Delete Bug</th>
 
       <tbody>
         <tr *ngFor='let bug of bugArray; index as i'>
@@ -72,12 +73,13 @@
           <td>{{bug.priority}}</td>
           <td>{{bug.severity}}</td>
           <td>{{bug.type}}</td>
-          <td>{{bug.submittedOn | date: 'd/M/yy'}}</td>
+
           <td>{{bug.eta | date: 'd/M/yy'}}</td>
           <td>{{bug.module}}</td>
           <td>{{bug.projectId}}</td>
           <td>{{bug.description}}</td>
           <td>{{bug.synopsis}}</td>
+          <td><button (click)='this.deleteBug(bug.id,i)'>X</button></td>
         </tr>
 
 

@@ -1,28 +1,24 @@
-@media screen and (max-width: 700px) {
-  .col-5, .col-6, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-#container {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  color: #2f5d62;
-}
-h1 {
+h3 {
   color: darkslategray;
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-size: 30px;
 }
-.btn.btn-primary {
-  height: 35px;
-  text-align: center;
-  width: 75px;
 
+#container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: #2f5d62;
 }
 
-.after{
-  color: red;
+#createBug {
+  font-size: 15px;
+}
+
+.btn.btn-primary {
+  height: 40px;
+  text-align: center;
+  width: 180px;
+  margin-top: 18px;
 }

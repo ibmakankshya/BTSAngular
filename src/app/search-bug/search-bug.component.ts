@@ -27,6 +27,10 @@ getABug(name:string){
 
   });
 }
+deleteBug(id:string,index:number){
+  const observable = this.bugService.delete(id);
+  observable.subscribe(response=>{this.bugArray.splice(index,1); alert("Bug Deleted")})
+}
 getStatus(status:STATUS){
   const observable = this.bugService.getStatus(status);
   observable.subscribe(response => {
