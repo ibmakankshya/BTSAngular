@@ -9,7 +9,7 @@ import { BugService } from '../bug.service';
 })
 export class UpdateBugComponent implements OnInit {
 
-  title:String="UPDATE BUG";
+  title:String="Update Bug";
   bug: Bug = new Bug();
   bugList: any;
   constructor(private bugService: BugService) { }
