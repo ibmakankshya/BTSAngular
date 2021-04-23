@@ -24,6 +24,8 @@ export class UpdateBugComponent implements OnInit {
         console.log(this.bugList);
         if (this.bugList) {
           this.bug = this.bugList;
+          let reseta=this.bug.eta;
+
         }
         else {
           alert("Given Bug with title " + bugName + " does not exist");

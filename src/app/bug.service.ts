@@ -30,9 +30,13 @@ export class BugService {
   getAllBugs(){
     return this.http.get(URL);
   }
+  getBugByPartialName(name:String){
+    return this.http.get(URL+'/'+name);
+
+  }
 
   getABug(name:string){
-    return this.http.get('http://localhost:8080/bug/name/'+name);
+    return this.http.get('http://localhost:8080/bug/'+name);
   }
   getStatus(status:STATUS){
     return this.http.get('http://localhost:8080/bug/status/'+status);

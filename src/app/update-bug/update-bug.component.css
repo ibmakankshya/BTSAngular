@@ -22,3 +22,7 @@ h3 {
   width: 180px;
   margin-top: 18px;
 }
+.primary{
+  color: darkslategrey;
+   border-radius: 5px;
+ }

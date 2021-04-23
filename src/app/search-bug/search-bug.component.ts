@@ -13,7 +13,7 @@ export class SearchBugComponent implements OnInit {
 bugArray: any;
   constructor(private bugService: BugService ) {}
 getABug(name:string){
-  const observable = this.bugService.getABug(name);
+  const observable = this.bugService.getBugByPartialName(name);
   observable.subscribe(response => {
 
     this.bugArray = response;
