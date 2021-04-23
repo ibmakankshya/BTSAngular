@@ -28,8 +28,15 @@ getABug(name:string){
   });
 }
 deleteBug(id:string,index:number){
+ if(confirm("R u sure u want to delete?")){
   const observable = this.bugService.delete(id);
+
   observable.subscribe(response=>{this.bugArray.splice(index,1); alert("Bug Deleted")})
+ }
+ else
+ alert("Deletion cancelled");
+
+
 }
 getStatus(status:STATUS){
   const observable = this.bugService.getStatus(status);
