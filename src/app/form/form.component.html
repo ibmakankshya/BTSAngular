@@ -55,10 +55,10 @@
 
                     <label for="bugPriority">Priority</label>
                     <span class="after">*</span>
-                    <select [(ngModel)]='bug.priority' ng-init=HIGH  name="input3" id="status" class="form-control" enable selected>
+                    <select [(ngModel)]='bug.priority' placeholder= "Priority" class="form-control" >
                       <option value="">--Select--</option>
-                     <option value="HIGH">HIGH</option>
-                      <option value="MEDIUM" selected>MEDIUM</option>
+                     <option  value="HIGH" selected enabled>HIGH</option>
+                      <option value="MEDIUM" >MEDIUM</option>
                       <option value="LOW">LOW</option>
                     </select>
 

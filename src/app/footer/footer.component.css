@@ -1,6 +1,15 @@
-.centered2 {
-  font-size:100%;
-  color: gray;
-  font-family: 'Brush Script MT', cursive;
+.content {
+  min-height: calc(100vh - 70px);
+}
 
+.footer {
+  height: 50px;
+}
+
+
+footer {
+  background: #42A5F5;
+  color: white;
+  line-height: 50px;
+  padding: 0 20px;
 }

@@ -19,7 +19,7 @@
       <div class="form-row">
 
         <div class="form-group col-md-3">
-          <select [(ngModel)]='bug.status' name='input2' id="Status" >
+          <select [(ngModel)]='bug.status' name='input2' id="Status" class="form-select">
             <option selected>Choose...</option>
             <option value="NEW">NEW</option>
             <option value="ASSIGNED">ASSIGNED</option>
@@ -40,13 +40,13 @@
           </select>
         </div>
         <div class="form-group col-md-2">
-          <button (click)='getStatus(bug.status)' class="btn btn-primary" type="submit">Search by Status</button>
+          <button (click)='getStatus(bug.status)' class="primary" type="submit">Search by Status</button>
         </div>
          <div class="form-group col-md-3">
-          <input [(ngModel)]= 'bug.name' name='input1' type="text" placeholder="Enter bug name">
+          <input [(ngModel)]= 'bug.name' name='input1' type="text" placeholder="Enter bug name" class="form-select">
         </div>
         <div class="form-group col-md-2">
-          <button (click)='getABug(bug.name)' class="btn btn-primary" type="submit">Search by Name</button>
+          <button (click)='getABug(bug.name)' class="primary" type="submit">Search by Name</button>
         </div>
 
       </div>
