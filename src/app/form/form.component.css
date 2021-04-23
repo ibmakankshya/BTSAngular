@@ -17,9 +17,12 @@ h1 {
 }
 
 .btn.btn-primary {
+
+  align-self: end;
+  align-content: stretch;
   height: 50px;
   text-align: center;
-  width: 200px;
+  width: 100%
 }
 .after{
 
@@ -27,4 +30,7 @@ h1 {
 }
 .just{
   padding-bottom: 150px;
+}
+#buttn{
+  align-content: flex-end;
 }

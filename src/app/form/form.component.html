@@ -30,7 +30,7 @@
                     <label for="bugStatuses">Status</label>
                     <span class="after">*</span>
                     <select [(ngModel)]='bug.status' name='input2' id="Status" class="form-control" >
-                      <option selected>Choose...</option>
+                      <option ngselected>Choose...</option>
                       <option value="NEW">NEW</option>
 						          <option value="ASSIGNED">ASSIGNED</option>
 					          	<option value="OPEN">OPEN</option>
@@ -109,23 +109,23 @@
 
                     </div>
             <div class="form-group">
-                <div class="form-group col-md-5">
-                    <label for="exampleFormControlTextarea1">Description</label>
-                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{500-bug.description.length}}  Characters left</span>
-                    <textarea [(ngModel)]='bug.description' name='input10' class="form-control" id="description" rows="3" maxlength="500"></textarea>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlTextarea1">Synposis</label>
+                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{100-bug.description.length}}  Characters left</span>
+                    <textarea [(ngModel)]='bug.synopsis' name='input10' class="form-control" id="description" rows="2" maxlength="100"></textarea>
 
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="exampleFormControlTextarea2">Synopsis</label>
-                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{100-bug.synopsis.length}}  Characters left</span>
-                    <textarea [(ngModel)]='bug.synopsis' name='input11' class="form-control" id="synopsis" rows="3" maxlength="100"></textarea>
+                <div class="form-group col-md-13">
+                    <label for="exampleFormControlTextarea2">Description</label>
+                    <span style="font-size: small"><em>&nbsp;&nbsp;</em>{{500-bug.synopsis.length}}  Characters left</span>
+                    <textarea [(ngModel)]='bug.description' name='input11' class="form-control" id="synopsis" rows="3" maxlength="500"></textarea>
 
                   </div>
             </div>
             </div>
         </form>
 
-        <button (click)='saveBug()' class="btn btn-primary" type="submit">Submit</button>
+        <button (click)='saveBug()' id="buttn" class="btn btn-primary" type="submit">Submit</button>
     </div>
 </body>
 </html>
