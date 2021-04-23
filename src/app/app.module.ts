@@ -11,6 +11,8 @@ import {Routes, RouterModule} from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { UpdateBugComponent } from './update-bug/update-bug.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+
+import { from } from 'rxjs';
 const routes:Routes=[
   {
     path:'CreateBug', component: FormComponent
@@ -39,10 +41,11 @@ const routes:Routes=[
     HomepageComponent,
     UpdateBugComponent,
     ContactUsComponent
+
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule,FormsModule,HttpClientModule,
+    BrowserModule,FormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
