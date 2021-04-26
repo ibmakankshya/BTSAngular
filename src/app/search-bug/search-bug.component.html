@@ -77,8 +77,10 @@
           <td>{{bug.eta | date: 'd/M/yy'}}</td>
           <td>{{bug.module}}</td>
           <td>{{bug.projectId}}</td>
-          <td>{{bug.description}}</td>
-
+          <td *ngIf="bug.description.length<15">{{bug.description}}</td>
+          <td *ngIf="!(bug.description.length<15)"> {{bug.description | slice:0:15}}<sub><button
+            class="btn btn-link btn-xs" (click)=showDescription(bug.description)>Read More</button></sub>
+      </td>
           <td><button (click)='this.deleteBug(bug.id,i)'>X</button></td>
         </tr>
 

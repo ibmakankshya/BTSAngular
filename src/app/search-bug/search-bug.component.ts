@@ -48,6 +48,11 @@ getABug(name:string){
 
   });
 }
+showDescription(description:string){
+  if(description){
+    alert(description);
+  }
+}
 deleteBug(id:string,index:number){
  if(confirm("Are u sure u want to delete?")){
   const observable = this.bugService.delete(id);

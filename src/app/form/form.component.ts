@@ -19,7 +19,7 @@ todayDate: Date= new Date();
   }
   saveBug(){
 
-  this.etaCheck();
+
       const observable=this.bugService.save(this.bug);
 
     observable.subscribe(response=> {
@@ -27,19 +27,14 @@ todayDate: Date= new Date();
       alert("Bug added succesfully..")
     },
     error=> {
-      if (!error.ok) {
-        let message: string = error.headers.get("error");
-        if (message.indexOf('ETA') > -1) {
-          alert("ETA Date cannot be a past date");
-        }
-        else {
-          alert("Error occurred");
-        }
-      }
+      this.etaCheck();
+      console.log(error);
+      alert("Error occured")
     })
-}
 
 
+
+  }
 
   ngOnInit(): void {
   }
