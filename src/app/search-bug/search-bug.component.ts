@@ -9,9 +9,30 @@ import { STATUS } from '../STATUS';
 })
 export class SearchBugComponent implements OnInit {
   title: string = 'SearchForm';
+  bugList:any;
   bug: Bug = new Bug(); //model -stores all form data, Change detection works on mode
 bugArray: any;
   constructor(private bugService: BugService ) {}
+  getBugbyNameStatus() {
+    let status = (<HTMLInputElement>document.getElementById('Status')).value;
+      let name = (<HTMLInputElement>document.getElementById('bugName')).value;
+    const promise = this.bugService.getBugbyStatusAndName(name, status);
+        promise.subscribe(response => {
+        console.log(response);
+          this.bugList = response;
+          if (this.bugList!=0) {
+            this.bugArray = this.bugList;
+          }
+          else {
+            alert("No Bug with Name : " + name + " and Status : " + status + " found");
+            this.bugArray = [];
+          }
+        },
+          error => {
+            alert('error happened..')
+          })
+      }
+
 getABug(name:string){
   const observable = this.bugService.getBugByPartialName(name);
   observable.subscribe(response => {

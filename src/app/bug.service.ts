@@ -34,7 +34,14 @@ export class BugService {
     return this.http.get(URL+'/'+name);
 
   }
-
+  getBugbyStatusAndName(name:string,status:string){
+    return this.http.get('http://localhost:8080/bug/'+'search/'+ name+'?status='+status, {
+      headers: {
+        "content-type": 'application/json',
+        reponseType: 'text'
+      }
+      });
+  }
   getABug(name:string){
     return this.http.get('http://localhost:8080/bug/'+name);
   }
